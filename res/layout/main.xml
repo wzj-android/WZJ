@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wangzijian="http://schemas.android.com/apk/res/com.android.fragmenttab"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.android.fragmenttab.SlidingMenu
+        android:id="@+id/id_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        wangzijian:rightPadding="50dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <include layout="@layout/left_menu" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <include layout="@layout/tab_top" />
+
+                <FrameLayout
+                    android:id="@+id/tab_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.0"
+                    android:background="#77557799" />
+
+                <include layout="@layout/tab_bottom" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.android.fragmenttab.SlidingMenu>
+
+</LinearLayout>
